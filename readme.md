@@ -34,7 +34,7 @@ sequence.reduce( value, function( func, value ) {
 
 ## Methods
 
-*   **reduce( [ intialValue, ] callbackFunction [, context ] )** _Promise_  
+*   **reduce(** [ _intialValue_, ] _callbackFunction_ [, _context_ ] **)** _Promise_  
     Apply a function against each item in the sequence, optionally calling
     the function with the specified context.
 
