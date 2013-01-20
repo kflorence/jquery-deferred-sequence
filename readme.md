@@ -3,32 +3,34 @@
 Allows a value to be sequentially processed through a list of objects, usually
 [Deferred](http://api.jquery.com/category/deferred-object/) objects that represent asynchronous events.
 
-    var value = 0,
-        items = [
-            function( value ) {
-                return value + 1;
-            },
-            function( value ) {
-                var dfd = $.Deferred();
+```javascript
+var value = 0,
+    items = [
+        function( value ) {
+            return value + 1;
+        },
+        function( value ) {
+            var dfd = $.Deferred();
 
-                setTimeout(function() {
-                    dfd.resolve( value * 2 );
-                }, 1000 );
+            setTimeout(function() {
+                dfd.resolve( value * 2 );
+            }, 1000 );
 
-                return dfd;
-            },
-            function( value ) {
-                return value * value;
-            }
-        ],
-        sequence = $.Deferred.Sequence( items );
-    
-    sequence.reduce( value, function( func, value ) {
-        return $.when( func( value ) );
-    
-    }).done(function( value ) {
-        console.log( value ); // => 4
-    });
+            return dfd;
+        },
+        function( value ) {
+            return value * value;
+        }
+    ],
+    sequence = $.Deferred.Sequence( items );
+
+sequence.reduce( value, function( func, value ) {
+    return $.when( func( value ) );
+
+}).done(function( value ) {
+    console.log( value ); // => 4
+});
+```
 
 ## Methods
 
@@ -38,17 +40,17 @@ Allows a value to be sequentially processed through a list of objects, usually
 
 ## Properties
 
-*   **head** _Deferred_
+*   **head** _Deferred_  
     A deferred object representing the beginning of the sequence.
 
-*   **items** _Array_, _Object_
+*   **items** _Array_, _Object_  
     The items given to the sequence on initialization.
 
-*   **master** _Deferred_
+*   **master** _Deferred_  
     A deferred object which tracks the aggregate state of all the deferreds
     in the sequence.
 
-*   **tail** _Deferred_
+*   **tail** _Deferred_  
     A deferred object representing the end of the sequence.
 
 ## License
