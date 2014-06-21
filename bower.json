@@ -1,0 +1,17 @@
+{
+  "name": "jquery-deferred-sequence",
+  "version": "1.0.0",
+  "description": "Sequentially process a value through a list of jQuery.Deferred objects.",
+  "main": "jquery.deferred.sequence.js",
+  "ignore": [
+    "**/.*"
+  ],
+  "keywords": [
+    "jquery",
+    "promise",
+    "deferred",
+    "sequence",
+    "process",
+    "reduce"
+  ]
+}
