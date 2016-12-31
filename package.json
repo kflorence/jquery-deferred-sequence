@@ -1,0 +1,25 @@
+{
+  "name": "jquery-deferred-sequence",
+  "version": "1.0.0",
+  "description": "Sequentially process a value through a list of jQuery Deferred objects.",
+  "main": "jquery.deferred.sequence.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kflorence/jquery-deferred-sequence.git"
+  },
+  "keywords": [
+    "jquery",
+    "deferred",
+    "sequence",
+    "promise"
+  ],
+  "author": "Kyle Florence",
+  "license": "(GPL-2.0 OR MIT)",
+  "bugs": {
+    "url": "https://github.com/kflorence/jquery-deferred-sequence/issues"
+  },
+  "homepage": "https://github.com/kflorence/jquery-deferred-sequence"
+}
